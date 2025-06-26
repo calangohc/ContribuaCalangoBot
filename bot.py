@@ -79,10 +79,10 @@ def cmd_historico(message):
     dados = le_ultimos_dez_valores_da_tabela()
     historico = ''
     for linha in reversed(dados):
-        if message.chat.id == APOIADORES:
-            historico = f'{historico}\n{linha[1]:<10} {linha[2][:16]:<17} {linha[3]:<8}'
+        if str(message.chat.id) == APOIADORES:
+            historico = f'{historico}{linha[1]:<10} {linha[2][:16]:<17} {linha[3]:<8}\n'
         else:
-            historico = f'{historico}\n{linha[2][:16]:<17} R$ {linha[3]:<8}'
+            historico = f'{historico}{linha[2][:16]:<17} R$ {linha[3]:<8}\n'
     mensagem = (
         '🗄 <b>Histórico</b>'+
         f'<blockquote expandable>{historico}</blockquote>'
