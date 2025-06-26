@@ -15,7 +15,7 @@ CALANGOHC = config['CALANGOHC']['ID']
 bot = telebot.TeleBot(TOKEN)
 
 force_reply = telebot.types.ForceReply(
-    selective=False,
+    selective=True,
     input_field_placeholder='Digite o saldo'
 )
 
