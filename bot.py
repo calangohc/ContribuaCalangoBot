@@ -121,7 +121,7 @@ def cmd_saldo(message):
         msg = bot.send_message(CALANGOHC, mensagem, parse_mode='HTML', reply_markup=botao_apoia_se)
         try:
             bot.pin_chat_message(CALANGOHC, msg.id, disable_notification=True)
-        except telebot.apihelper.ApiTelegramException::
+        except telebot.apihelper.ApiTelegramException:
             print('Bot sem permissão para fixar mensagens')
 
 @bot.message_handler(content_types=telebot.util.content_type_service)
