@@ -107,7 +107,7 @@ def cmd_saldo(message):
         '🏦 <b>Finanças do Calango</b>\n\n'
         'O @CalangoHC precisa de R$ 2.500,00 para virar o mês.\n\n'+
         f'No momento, nosso saldo é de R$ {saldo}, '+
-        f'<b>que cobre o custo de {float(saldo)/60:.2f} dias</b>. ⚠️\n\n'+
+        f'<b>que cobre o custo de {float(saldo)/85:.2f} dias</b>. ⚠️\n\n'+
         '💶 <b>Contribua!</b>\n'+
         ' 🔸 <a href="https://apoia.se/calangohc">Doação recorrente no Apoia-se</a>\n'+
         ' 🔸 Chave PIX: <code>pix@calango.club</code>\n\n'+
