@@ -13,7 +13,8 @@ if __name__ == "__main__":
         '🔄 Para atualizar o saldo, envie\n'+
         '<code>/atualiza_saldo@ContribuaCalangoBot</code>\n\n'+
         '📮 Para enviar o aviso no grupo @CalangoHC, envie\n'+
-        '<code>/avisa@ContribuaCalangoBot</code>'
+        '<code>/avisa@ContribuaCalangoBot</code>\n\n'+
+        '@Otalbigua @gabiiel'
     )
 
     bot.send_message(
