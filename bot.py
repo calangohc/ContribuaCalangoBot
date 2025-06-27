@@ -2,7 +2,6 @@ import configparser
 import datetime
 import sqlite3
 import telebot
-import os
 
 config = configparser.ConfigParser()
 config.sections()

@@ -1,0 +1,22 @@
+name: Lembrete
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 5'
+
+
+jobs:
+  lembrete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - name: Instala requirements.txt
+        run: pip install -r requirements.txt
+      - name: Envia lembrete
+        run: python lembrete.py
