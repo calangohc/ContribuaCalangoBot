@@ -90,7 +90,7 @@ def cmd_historico(message):
 
     bot.reply_to(message, mensagem, parse_mode='HTML') 
 
-@bot.message_handler(commands=['avisa'])
+@bot.message_handler(commands=['avisa', 'avisar'])
 def cmd_avisa_grupao(message):
     if bot.get_chat_member(APOIADORES, message.from_user.id).status == 'left':
         print('Somente os portadores da chave do CalangoHC podem enviar o aviso.')
@@ -119,7 +119,10 @@ def cmd_saldo(message):
         msg = bot.send_message(message.chat.id, mensagem, parse_mode='HTML', reply_markup=botao_apoia_se)
     except AttributeError:
         msg = bot.send_message(CALANGOHC, mensagem, parse_mode='HTML', reply_markup=botao_apoia_se)
-        bot.pin_chat_message(CALANGOHC, msg.id, disable_notification=True)
+        try:
+            bot.pin_chat_message(CALANGOHC, msg.id, disable_notification=True)
+        except telebot.apihelper.ApiTelegramException::
+            print('Bot sem permissão para fixar mensagens')
 
 @bot.message_handler(content_types=telebot.util.content_type_service)
 def deleta_mensagens_de_servico(message):
