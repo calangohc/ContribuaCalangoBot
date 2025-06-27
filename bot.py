@@ -105,7 +105,7 @@ def cmd_saldo(message):
 
     mensagem = (
         '🏦 <b>Finanças do Calango</b>\n\n'
-        'O @CalangoHC precisa de R$ 2.000,00 para virar o mês.\n\n'+
+        'O @CalangoHC precisa de R$ 2.500,00 para virar o mês.\n\n'+
         f'No momento, nosso saldo é de R$ {saldo}, '+
         f'<b>que cobre o custo de {float(saldo)/60:.2f} dias</b>. ⚠️\n\n'+
         '💶 <b>Contribua!</b>\n'+
