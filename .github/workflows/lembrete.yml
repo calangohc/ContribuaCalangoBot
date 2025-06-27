@@ -20,3 +20,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Envia lembrete
         run: python lembrete.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          APOIADORES: ${{ secrets.APOIADORES }}

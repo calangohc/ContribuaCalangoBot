@@ -1,12 +1,8 @@
-import configparser
 import telebot
+import os
 
-config = configparser.ConfigParser()
-config.sections()
-
-config.read('calango.conf')
-TOKEN = config['BOT']['TOKEN']
-APOIADORES = config['APOIADORES']['ID']
+TOKEN = os.environ.get('BOT_TOKEN')
+APOIADORES = os.environ.get('APOIADORES')
 
 bot = telebot.TeleBot(TOKEN)
 
