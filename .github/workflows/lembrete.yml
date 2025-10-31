@@ -1,8 +1,6 @@
 name: Lembrete
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 9 * * 5'
 
 
 jobs:
